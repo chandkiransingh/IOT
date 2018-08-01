@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "56047962177",
+    "firebase_url": "https://venugopal-840d9.firebaseio.com",
+    "project_id": "venugopal-840d9",
+    "storage_bucket": "venugopal-840d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56047962177:android:d660894f38693c99",
+        "android_client_info": {
+          "package_name": "com.example.ck.venugopal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56047962177-7fphlc7eec5htkiqgjhvm0fo42m1p8hv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ck.venugopal",
+            "certificate_hash": "a2cf167c7d0df105a8eb04f0f8817f01d7c2f2c2"
+          }
+        },
+        {
+          "client_id": "56047962177-mbs38ndm693ki1fbhkk89im5rh3i38fu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdQbkzr8tmyhSfhQ3lr9MwHiXHHEJKi2s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56047962177-mbs38ndm693ki1fbhkk89im5rh3i38fu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
