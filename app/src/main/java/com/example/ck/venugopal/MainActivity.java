@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                     relay2.setValue(false);
                     relay3.setValue(false);
                     relay4.setValue(false);
-
                 }
             }
         });
