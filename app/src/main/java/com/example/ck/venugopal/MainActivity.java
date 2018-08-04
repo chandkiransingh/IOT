@@ -20,12 +20,15 @@ public class MainActivity extends AppCompatActivity {
     boolean temp1,temp2,temp3,temp4;
     Switch switch1;
     ImageView img1,img2,img3,img4;
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference  MCB = database.getReference("switchmain");
+
+    DatabaseReference  MCB   = database.getReference("switchmain");
     DatabaseReference relay1 = database.getReference("relay1");
     DatabaseReference relay2 = database.getReference("relay2");
     DatabaseReference relay3 = database.getReference("relay3");
     DatabaseReference relay4 = database.getReference("relay4");
+    DatabaseReference text1 = database.getReference("text1");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
         img3 = findViewById(R.id.img3);
         img4 = findViewById(R.id.img4);
         switch1 = findViewById(R.id.switch1);
-
+        editText1= findViewById(R.id.editText1);
+        editText2= findViewById(R.id.editText2);
+        editText3= findViewById(R.id.editText3);
+        editText4= findViewById(R.id.editText4);
 
         switch1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                     img1.setImageResource(R.drawable.ic_slide_switch_off);
                     temp1=true;
                 }
-
 
                 else
                 {
@@ -178,7 +183,6 @@ public class MainActivity extends AppCompatActivity {
                 {
                     img4.setImageResource(R.drawable.ic_slide_switch_on);
                     temp4=false;
-
                 }
             }
 
@@ -267,6 +271,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        editText1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText1.setText("text1");
+                text1.setValue("text1");
+
+
+            }
+        });
+
+
+
 
 
     }
