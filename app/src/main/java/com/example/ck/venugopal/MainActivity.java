@@ -38,6 +38,41 @@ public class MainActivity extends AppCompatActivity {
         switch1 = findViewById(R.id.switch1);
 
 
+        switch1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(switchmain==0) {
+                    img1.setImageResource(R.drawable.ic_slide_switch_on);
+                    img2.setImageResource(R.drawable.ic_slide_switch_on);
+                    img3.setImageResource(R.drawable.ic_slide_switch_on);
+                    img4.setImageResource(R.drawable.ic_slide_switch_on);
+                    MCB.setValue(switchmain);
+                    switchmain = 1;
+                    relay1.setValue(true);
+                    relay2.setValue(true);
+                    relay3.setValue(true);
+                    relay4.setValue(true);
+
+                }
+
+                else
+                {
+                    img1.setImageResource(R.drawable.ic_slide_switch_off);
+                    img2.setImageResource(R.drawable.ic_slide_switch_off);
+                    img3.setImageResource(R.drawable.ic_slide_switch_off);
+                    img4.setImageResource(R.drawable.ic_slide_switch_off);
+                    MCB.setValue(switchmain);
+                    switchmain = 0;
+                    relay1.setValue(false);
+                    relay2.setValue(false);
+                    relay3.setValue(false);
+                    relay4.setValue(false);
+
+                }
+            }
+        });
+
+
         relay1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -66,12 +101,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
         relay2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                temp1 = dataSnapshot.getValue(Boolean.class);
+                temp2 = dataSnapshot.getValue(Boolean.class);
                 Log.d("firesale", "Value is: " + temp1);
 
                 if(temp2==false) {
@@ -93,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.w("firesale", "Failed to read value.", error.toException());
             }
         });
+
+
 
         relay3.addValueEventListener(new ValueEventListener() {
             @Override
@@ -149,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.w("firesale", "Failed to read value.", error.toException());
             }
         });
+
 
 
         img1.setOnClickListener(new View.OnClickListener() {
@@ -227,6 +268,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
 
     }
 }
