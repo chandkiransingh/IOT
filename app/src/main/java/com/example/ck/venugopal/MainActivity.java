@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 {
                     img1.setImageResource(R.drawable.ic_slide_switch_on);
                     temp1=false;
-
                 }
             }
 
