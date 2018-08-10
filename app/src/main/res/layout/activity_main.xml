@@ -1,176 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit2"
+        android:layout_alignLeft="@+id/edit2"
+        android:layout_alignTop="@+id/Relay2"
+        android:text="OFF"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/watch3"
+        android:layout_alignEnd="@+id/img1"
+        android:layout_alignRight="@+id/img1"
+        android:text="OFF"
+        android:textColor="@android:color/background_light" />
 
     <View
         android:id="@+id/view5"
-        android:layout_width="176dp"
-        android:layout_height="195dp"
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="106dp"
+        android:layout_marginLeft="16dp"
         android:background="@drawable/selector"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteY="144dp" />
 
-    <ImageView
-        android:id="@+id/img4"
-        android:layout_width="100dp"
-        android:layout_height="136dp"
-        app:srcCompat="@drawable/ic_slide_switch_off"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="372dp" />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_alignTop="@+id/view5"
+        android:background="@drawable/selector"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/view5"
+        android:layout_alignLeft="@+id/view5"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/selector"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="351dp" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:layout_alignLeft="@+id/view2"
+        android:layout_alignStart="@+id/view2"
+        android:layout_alignTop="@+id/view"
+        android:background="@drawable/selector"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="351dp" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="62dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="36dp"
+        android:layout_toStartOf="@+id/img4"
+        android:layout_toLeftOf="@+id/img4"
         android:scaleX="2"
         android:scaleY="2"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="27dp" />
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
-        android:id="@+id/img2"
+        android:id="@+id/img4"
         android:layout_width="100dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/view4"
+        android:layout_alignRight="@+id/view4"
+        android:layout_marginTop="20dp"
+        android:layout_alignTop="@+id/view"
         app:srcCompat="@drawable/ic_slide_switch_off"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="170dp" />
-
-    <ImageView
-        android:id="@+id/img3"
-        android:layout_width="100dp"
-        android:layout_height="134dp"
-        app:srcCompat="@drawable/ic_slide_switch_off"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="372dp" />
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="365dp" />
 
     <ImageView
         android:id="@+id/img1"
         android:layout_width="100dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignTop="@+id/view5"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
         app:srcCompat="@drawable/ic_slide_switch_off"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="170dp" />
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/view4"
+        android:layout_alignRight="@+id/view4"
+        android:layout_alignTop="@+id/view5"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/ic_slide_switch_off"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/view"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        app:srcCompat="@drawable/ic_slide_switch_off"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="365dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toEndOf="@+id/switch1"
+        android:layout_toRightOf="@+id/switch1"
         android:text="ON"
         android:textColor="@android:color/background_light"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="257dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="300dp"
+        tools:layout_editor_absoluteY="36dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/img1"
+        android:layout_alignRight="@+id/img1"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginRight="20dp"
         android:text="OFF"
         android:textColor="@android:color/background_light"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="176dp"
-        android:layout_height="196dp"
-        android:background="@drawable/selector"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="355dp" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="270dp"
-        android:layout_height="80dp"
-        android:background="@drawable/selector"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="176dp"
-        android:layout_height="195dp"
-        android:background="@drawable/selector"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="356dp" />
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="175dp"
-        android:layout_height="195dp"
-        android:background="@drawable/selector"
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="36dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/watch2"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_alignStart="@+id/img4"
+        android:layout_alignLeft="@+id/img4"
+        android:layout_centerVertical="true"
         android:background="@drawable/ic_timer_black_24dp"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="300dp" />
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="295dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/watch3"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/img1"
+        android:layout_alignLeft="@+id/img1"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/ic_timer_black_24dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="508dp" />
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="502dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/watch4"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_alignStart="@+id/img4"
+        android:layout_alignLeft="@+id/img4"
+        android:layout_alignTop="@+id/watch3"
         android:background="@drawable/ic_timer_black_24dp"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="506dp" />
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="502dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/watch1"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/ic_mode_edit_black_24dp"
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="300dp" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ic_mode_edit_black_24dp"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="511dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ic_mode_edit_black_24dp"
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="511dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ic_mode_edit_black_24dp"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="300dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_alignStart="@+id/img1"
+        android:layout_alignLeft="@+id/img1"
+        android:layout_centerVertical="true"
         android:background="@drawable/ic_timer_black_24dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="300dp" />
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="295dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/edit2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/view4"
+        android:layout_alignRight="@+id/view4"
+        android:layout_alignTop="@+id/watch2"
+        android:background="@drawable/ic_mode_edit_black_24dp"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <Button
+        android:id="@+id/edit3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/img1"
+        android:layout_alignRight="@+id/img1"
+        android:layout_alignTop="@+id/watch3"
+        android:background="@drawable/ic_mode_edit_black_24dp"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="499dp" />
+
+    <Button
+        android:id="@+id/edit4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/img4"
+        android:layout_alignRight="@+id/img4"
+        android:layout_alignTop="@+id/watch3"
+        android:background="@drawable/ic_mode_edit_black_24dp"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="502dp" />
+
+    <Button
+        android:id="@+id/edit1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/img1"
+        android:layout_alignRight="@+id/img1"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_mode_edit_black_24dp"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <TextView
+        android:id="@+id/Relay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/Relay1"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:text="Relay2"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <TextView
+        android:id="@+id/Relay3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/watch3"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:text="Relay3"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="473dp" />
+
+    <TextView
+        android:id="@+id/Relay4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/watch3"
+        android:layout_toEndOf="@+id/switch1"
+        android:layout_toRightOf="@+id/switch1"
+        android:text="Relay4"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="473dp" />
+
+    <TextView
+        android:id="@+id/Relay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="234dp"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@+id/edit3"
+        android:layout_toLeftOf="@+id/edit3"
+        android:text="Relay1"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="265dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/watch3"
+        android:layout_alignEnd="@+id/view4"
+        android:layout_alignRight="@+id/view4"
+        android:text="OFF"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/img1"
+        android:layout_alignRight="@+id/img1"
+        android:layout_alignTop="@+id/Relay2"
+        android:text="OFF"
+        android:textColor="@android:color/background_light" />
+</RelativeLayout>

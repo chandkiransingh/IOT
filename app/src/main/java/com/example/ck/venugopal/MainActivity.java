@@ -1,12 +1,19 @@
 package com.example.ck.venugopal;
 
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.content.Context;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -14,12 +21,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.concurrent.TimeUnit;
+
 public class MainActivity extends AppCompatActivity {
     EditText editText1,editText2,editText3,editText4;
     int switchmain;
     boolean temp1,temp2,temp3,temp4;
     Switch switch1;
     ImageView img1,img2,img3,img4;
+    Button watch1,watch2,watch3,watch4;
+    TextView textView1,textView2,textView3,textView4;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -39,10 +50,17 @@ public class MainActivity extends AppCompatActivity {
         img3 = findViewById(R.id.img3);
         img4 = findViewById(R.id.img4);
         switch1 = findViewById(R.id.switch1);
-        editText1= findViewById(R.id.editText1);
+       /* editText1= findViewById(R.id.editText1);
         editText2= findViewById(R.id.editText2);
         editText3= findViewById(R.id.editText3);
         editText4= findViewById(R.id.editText4);
+       */
+        watch1 = findViewById(R.id.watch1);
+        watch2 = findViewById(R.id.watch2);
+        watch3 = findViewById(R.id.watch3);
+        watch4 = findViewById(R.id.watch4);
+
+
 
         switch1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +73,13 @@ public class MainActivity extends AppCompatActivity {
                     MCB.setValue(switchmain);
                     switchmain = 1;
                     relay1.setValue(true);
+                  /*  try {
+                        TimeUnit.MINUTES.sleep(1);
+                    }
+                    catch (Exception e)
+                    {
+                        System.out.println("NOt working code");
+                    }*/
                     relay2.setValue(true);
                     relay3.setValue(true);
                     relay4.setValue(true);
@@ -259,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(temp4) {
+                if(temp4==true) {
                     img4.setImageResource(R.drawable.ic_slide_switch_off);
                     temp4 = false;
                     relay4.setValue(temp4);
@@ -274,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        editText1.setOnClickListener(new View.OnClickListener() {
+        /*editText1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editText1.setText("text1");
@@ -283,10 +308,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
+*/
     }
 }
